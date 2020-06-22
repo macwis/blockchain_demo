@@ -22,12 +22,12 @@ Easiest way to run the whole thing is to do it locally:
 1. To run couple of nodes - you can multiply them by e.g. setting various port numbers.
 E.g.
 `python blockchain/blockchain.py -p 5001`, 
-`python blockchain/blockchain.py -p 5001`, etc.
+`python blockchain/blockchain.py -p 5002`, etc.
 
 2. To run couple of clients - same trick:
 e.g.
 `python blockchain_client/blockchain_client.py -p 8081`,
-`python blockchain_client/blockchain_client.py -p 8081`, etc.
+`python blockchain_client/blockchain_client.py -p 8082`, etc.
 
 ### As a client:
 
