@@ -173,6 +173,7 @@
                         $('#basic_modal').modal('show');
                     },
                     error: function(error) {
+                        alert('Please insert correct values!');
                         console.log(error);
                     }
                 });
@@ -198,6 +199,7 @@
                         $('#success_transaction_modal').modal('show');
                     },
                     error: function(error) {
+                        alert(error);
                         console.log(error);
                     }
                 });

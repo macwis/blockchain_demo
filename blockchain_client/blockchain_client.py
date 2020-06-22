@@ -1,15 +1,16 @@
 import binascii
-from collections import OrderedDict
 from argparse import ArgumentParser
-from flask import Flask
-from flask import render_template
-from flask import jsonify
-from flask import request
+from collections import OrderedDict
+
 import Crypto
 import Crypto.Random
+from Crypto.Hash import SHA
 from Crypto.PublicKey import RSA
 from Crypto.Signature import PKCS1_v1_5
-from Crypto.Hash import SHA
+from flask import Flask
+from flask import jsonify
+from flask import render_template
+from flask import request
 
 
 class Transaction:
@@ -23,7 +24,6 @@ class Transaction:
     def to_dict(self):
         return OrderedDict({
             'sender_public_key': self.sender_public_key,
-            'sender_private_key': self.sender_private_key,
             'recipient_public_key': self.recipient_public_key,
             'amount': self.amount
         })
