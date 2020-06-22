@@ -39,9 +39,7 @@
     </div>
 
     <div class="container">
-        <table class="table table-bordered" id="mined_transactions_table">
-
-        </table>
+        <table class="table table-bordered" id="mined_transactions_table"></table>
     </div>
 
 {% endblock %}
@@ -138,6 +136,23 @@
             $('#mine_button').click(function() {
                 $.ajax({
                     url: '/mine',
+                    type: 'GET',
+                    success: function(response) {
+                        window.location.reload();
+                    },
+                    error: function(error) {
+                        console.log(error)
+                    }
+                });
+            });
+
+            $('#refresh_transactions').click(function() {
+                windows.location.reload();
+            });
+
+            $('#refresh_blockchain').click(function() {
+                $.ajax({
+                    url: '/nodes/resolve',
                     type: 'GET',
                     success: function(response) {
                         window.location.reload();
